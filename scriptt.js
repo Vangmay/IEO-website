@@ -36,11 +36,12 @@ let targetX = 0;
 let targetY = 0;
 
 const windowX = window.innerWidth / 2;
-const windowY = window.innerHeight / 2;
+const windowX = window.innerHeight / 2;
 
 function onMouseMove(event){
     mouseX = (event.clientX - windowX)
     mouseY = (event.clientY - windowY)
+    console.log(mouseX, mouseY)
 }
 
 document.addEventListener('mousemove', onMouseMove)
@@ -65,8 +66,6 @@ function animate() {
     
     earth.rotation.y = .5 * elapsedTime
     earth.rotation.y += .5 * (targetX - earth.rotation.y)
-    earth.rotation.x += .5 * (targetY - earth.rotation.x)
-    earth.rotation.z += .5 * (targetY - earth.rotation.x)
     
 }
 
