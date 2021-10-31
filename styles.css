@@ -27,14 +27,8 @@ nav{
     z-index: 99;
     background-color: rgba(0, 0, 0, 0.3);
     padding:16px 32px;
-    display: none;
 }
-h1{
-    color: white;
-    font-size: 28px;
-    font-weight: 500;
-    text-transform: uppercase;
-}
+
 
 .hamburger{
     display:block;
@@ -120,13 +114,38 @@ h1{
     height: 100vh;
     width: 100%;
     background-image: linear-gradient( 170deg,  rgba(26,33,64,1) 10.9%, rgba(81,84,115,1) 87.1% );
-    display: block;
+    display: grid;
+    place-items: center;
 }
 .hero canvas{
+    outline: none;
     height: 100%;
     width: 100%;
 }
-
+.text{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    place-items: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+}
+.text h1{
+    color: whitesmoke;
+    font-size: 200px;
+    mix-blend-mode:difference;
+}
+.text p{
+    font-size: 13px;
+}
+.Main{
+    width: 100%;
+    height: 100vh;
+}
 
 @media only screen and (min-width: 960px) {
     /* styles for browsers larger than 960px; */

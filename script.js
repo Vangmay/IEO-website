@@ -61,6 +61,7 @@ function onMouseMove(event){
 }
 
 document.addEventListener('mousemove', onMouseMove)
+
 const clock = new THREE.Clock()
 
 let loader = new THREE.GLTFLoader();
@@ -98,3 +99,9 @@ function onWindowResize() {
     
 }
 //Threee
+
+const text= document.querySelector('.text')
+window.addEventListener('scroll',function(){
+    let offset = window.scrollY
+    text.style.top = -offset * 0.75 + 'px'
+})
