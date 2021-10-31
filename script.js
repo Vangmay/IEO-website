@@ -8,23 +8,46 @@ hamburger.addEventListener('click',function (){
 })
 
 //Threee
+//Important stuff
+const gui = new dat.GUI()
 const Width = hero.clientWidth
 const Height=  hero.clientHeight
 const scene = new THREE.Scene();
-scene.background = new THREE.Color(0xdddddd);
+
 
 const camera = new THREE.PerspectiveCamera(40,Width/Height,1,5000);
 camera.rotation.y = 45/180 * Math.PI
-camera.position.x = 1600;
-camera.position.y = 100;
-camera.position.z = 1300;
-const renderer = new THREE.WebGLRenderer();
+camera.position.x = 1215;
+camera.position.y = 304;
+camera.position.z = 1150;
+
+const renderer = new THREE.WebGLRenderer({alpha:true});
 renderer.setSize( Width,Height );
 hero.appendChild( renderer.domElement );
+//Important stuff
 
-const hlight = new THREE.AmbientLight(0x404040,3);
-scene.add(hlight)
+//Lighting
+const hlight = new THREE.AmbientLight(0xFFFFFF,0.1);
+hlight.position.set(2,2,4 );
+// scene.add(hlight)
 
+var BgLight = new THREE.PointLight(0xffffff, 0.2,1000);
+gui.add(BgLight.position,'x').min(-3000).max(3000)
+gui.add(BgLight.position,'y').min(-3000).max(3000)
+gui.add(BgLight.position,'z').min(-3000).max(3000)
+BgLight.position.set(414,121,88.54)
+scene.add( BgLight );
+
+var light = new THREE.PointLight(0xffffff, 0.2,1000);
+light.position.set(414,121,88.54)
+scene.add( light );
+
+var light2 = new THREE.PointLight(0x52f9c4, 2.8,1000);
+light2.position.set(414,772,576.7)
+scene.add( light2 );
+
+
+//Lighting
 
 window.addEventListener( 'resize', onWindowResize );
 
@@ -50,7 +73,7 @@ let loader = new THREE.GLTFLoader();
 loader.load('./src/Earth.gltf',function(gltf){
     earth = gltf.scene.children[0]
     scene.scale.set(1,1,1)
-    scene.add(earth);
+    scene.add(earth)
     animate();
 })
 
@@ -64,9 +87,9 @@ function animate() {
 	renderer.render( scene, camera );
     
     earth.rotation.y = .5 * elapsedTime
-    earth.rotation.y += .5 * (targetX - earth.rotation.y)
-    earth.rotation.x += .5 * (targetY - earth.rotation.x)
-    earth.rotation.z += .5 * (targetY - earth.rotation.x)
+    earth.rotation.y += 1.6 * (targetX - earth.rotation.y)
+    earth.rotation.x += 1.6 * (targetY - earth.rotation.x)
+    earth.rotation.z += 1.6 * (targetY - earth.rotation.x)
     
 }
 
