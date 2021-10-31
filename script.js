@@ -9,7 +9,7 @@ hamburger.addEventListener('click',function (){
 
 //Threee
 //Important stuff
-const gui = new dat.GUI()
+//const gui = new dat.GUI()
 const Width = hero.clientWidth
 const Height=  hero.clientHeight
 const scene = new THREE.Scene();
@@ -31,12 +31,6 @@ const hlight = new THREE.AmbientLight(0xFFFFFF,0.1);
 hlight.position.set(2,2,4 );
 // scene.add(hlight)
 
-var BgLight = new THREE.PointLight(0xffffff, 0.2,1000);
-gui.add(BgLight.position,'x').min(-3000).max(3000)
-gui.add(BgLight.position,'y').min(-3000).max(3000)
-gui.add(BgLight.position,'z').min(-3000).max(3000)
-BgLight.position.set(414,121,88.54)
-scene.add( BgLight );
 
 var light = new THREE.PointLight(0xffffff, 0.2,1000);
 light.position.set(414,121,88.54)
