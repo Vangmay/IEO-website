@@ -7,7 +7,7 @@ hamburger.addEventListener('click',function (){
     mobile_menu.classList.toggle('is-active');
 })
 
-//Threee
+//Threee          
 //Important stuff
 //const gui = new dat.GUI()
 const Width = hero.clientWidth
@@ -16,13 +16,10 @@ const scene = new THREE.Scene();
 
 
 const camera = new THREE.PerspectiveCamera(40,Width/Height,1,5000);
-camera.rotation.y = 45/180 * Math.PI
-camera.position.x = 1213;
-camera.position.y = 333;
+camera.rotation.y = 45/180 * Math.PI;
+camera.position.x = 1215;
+camera.position.y = 304;
 camera.position.z = 1150;
-// gui.add(camera.position,'x').min(-1299).max(1500)
-// gui.add(camera.position,'y').min(-1299).max(1500)
-// gui.add(camera.position,'z').min(-1299).max(1500)
 
 const renderer = new THREE.WebGLRenderer({alpha:true});
 renderer.setSize( Width,Height );
@@ -31,7 +28,7 @@ hero.appendChild( renderer.domElement );
 
 //Lighting
 const hlight = new THREE.AmbientLight(0xFFFFFF,0.1);
-hlight.position.set(2,2,4 );
+hlight.position.set(2,2,4);
 // scene.add(hlight)
 
 
@@ -84,7 +81,7 @@ function animate() {
     requestAnimationFrame( animate );
 	renderer.render( scene, camera );
     
-    earth.rotation.y = .5 * elapsedTime
+    earth.rotation.y = 0.5 * elapsedTime
     earth.rotation.y += 1.6 * (targetX - earth.rotation.y)
     earth.rotation.x += 1.6 * (targetY - earth.rotation.x)
     earth.rotation.z += 1.6 * (targetY - earth.rotation.x)
@@ -107,7 +104,4 @@ const text= document.querySelector('.text')
 window.addEventListener('scroll',function(){
     let offset = window.scrollY
     text.style.top = -offset * 0.75 + 'px'
-})
-particlesJS.load('hero','./src/particles.json',function(){
-    console.log('loaded')
 })
