@@ -17,8 +17,8 @@ const scene = new THREE.Scene();
 
 const camera = new THREE.PerspectiveCamera(40,Width/Height,1,5000);
 camera.rotation.y = 45/180 * Math.PI;
-camera.position.x = 1215;
-camera.position.y = 304;
+camera.position.x = 1213;
+camera.position.y = 333;
 camera.position.z = 1150;
 
 const renderer = new THREE.WebGLRenderer({alpha:true});
@@ -104,4 +104,7 @@ const text= document.querySelector('.text')
 window.addEventListener('scroll',function(){
     let offset = window.scrollY
     text.style.top = -offset * 0.75 + 'px'
+})
+particlesJS.load('hero','./src/particles.json',function(){
+    console.log('loaded')
 })
