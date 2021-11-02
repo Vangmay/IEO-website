@@ -6,6 +6,7 @@
     --light:#EEEEEE;
     --dark:#212121;
     --darkpurple:#362f4b;
+    --green:#37836e;
 }
 img{
     width: 150px;
@@ -149,11 +150,42 @@ nav{
     mix-blend-mode:difference;
 }
 .text p{
+    color: white;
     font-size: 13px;
 }
-.Main{
+#Main{
+    position: relative;
     width: 100%;
     height: 100vh;
+    background-color: black;
+    color: white;
+    align-items: center;
+    text-align: center;
+}
+#Main canvas{
+    top: 0%;
+    left: 0%;
+    position: absolute;
+    z-index: 0;
+}
+.problem{
+    position: relative;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+}
+.problem h1{
+    width: 80%;
+    font-size: 40px;
+}    
+.problem p{
+    width:80%;
+}
+.problem h1 span{
+    color: var(--green);
 }
 
 @media only screen and (min-width: 960px) {

@@ -108,3 +108,6 @@ window.addEventListener('scroll',function(){
 particlesJS.load('hero','./src/particles.json',function(){
     console.log('loaded')
 })
+particlesJS.load('Main','./src/particles.json',function(){
+    console.log('loaded')
+})
