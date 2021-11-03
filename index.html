@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Earth's Domain</title>
+    <link
+    rel="stylesheet"
+        href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="../global_styles.css">
 </head>
@@ -35,7 +41,7 @@
 
     <Section class="hero" id="hero">
         <div class="text">
-            <h1>Welcome to Title</h1>
+            <h1>Welcome to Earth's Domain</h1>
             <p>Swipe down</p>
         </div>
     </Section>
@@ -44,8 +50,108 @@
             <h1><span> OUR MOTHER EARTH </span>is suffering!</h1>
             <p>Forests are turning into deserts, wildlife are escaping to extinction, temperatures are ever increasing. The anthropocene era has brought concerning realities forward and it is time to act and to do something. Our planet has fed us for millions of years; it gave us water when we wanted and food when needed. Now is the time for us humans to give back to our ill planet. Let's work together to make our home beautiful again! This website is for those environmentalists who want to give back. With the right information, data and contribution, we can rebuild a greener planet earth. </p>
         </div>
-    </Section>
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/QQYgCxu988s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="swiper-slide">
+                <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/m-FM845giaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="swiper-slide">
+                <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/G4H1N_yXBiA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="swiper-slide">
+                <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/3DOcQRl9ASc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
         
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        
+            <!-- If we need scrollbar -->
+            
+        </div>
+        
+    </Section>
+    <!-- Slider stuff         -->
+    <style>
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .swiper-slide {
+            height: 100%;
+            width: 100%;
+            text-align: center;
+            font-size: 18px;
+            background: rgba(255, 255, 255, 0);
+            
+            
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit:contain;
+        }
+        .swiper-button-prev,.swiper-button-next{
+            color:var(--primary);
+        }
+        .swiper-pagination-bullet{
+            background-color: var(--purple);
+        }
+        .swiper-pagination-bullet-active-next,.swiper-pagination-bullet-active-next-next{
+            background-color: var(--primary);
+            opacity: 0.9;
+        }    
+    </style>
+    <script>
+        const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+        });
+    </script>
+    <!-- Slider stuff         -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.min.js" integrity="sha512-LF8ZB1iTwi4Qvkm4pekHG4a437Y9Af5ZuwbnW4GTbAWQeR2E4KW8WF+xH8b9psevV7wIlDMx1MH9YfPqgKhA/Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./gltf_loader.js"></script>

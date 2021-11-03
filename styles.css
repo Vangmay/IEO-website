@@ -163,8 +163,12 @@ nav{
     z-index: 100;
     color: whitesmoke;
     font-family: 'Staatliches', cursive;
-    font-size: 200px;
+    font-size: 150px;
     mix-blend-mode:difference;
+    transition: 0.3s ease-in;
+}
+.text h1:hover{
+    color:var(--green);
 }
 .text p{
     color: rgb(0, 0, 0);
@@ -174,12 +178,13 @@ nav{
 #Main{
     position: relative;
     width: 100%;
-    height: fit-content;
-    min-height: 75vh;
+    height: 100vh;
     background-color: black;
     color: white;
     align-items: center;
     text-align: center;
+    display: flex;
+    flex-direction: row;
 }
 #Main canvas{
     top: 0%;
