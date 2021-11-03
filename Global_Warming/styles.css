@@ -11,6 +11,11 @@
     --green:#37836e;
     --hamburgerColour:#FFF
 }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 img{
     width: 150px;
     border-radius: 40px;
@@ -174,12 +179,13 @@ nav{
 #Main{
     position: relative;
     width: 100%;
-    height: fit-content;
-    min-height: 75vh;
-    background-color: black;
+    height: 100vh;
+    background-color: var(--blue);
     color: white;
     align-items: center;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 #Main canvas{
     top: 0%;
@@ -187,32 +193,20 @@ nav{
     position: absolute;
     z-index: 0;
 }
-.problem{
-    position: relative;
-    z-index: 10;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items:center ;
+.first{
+    height: 25%;
+    width: 50%;
     
 }
-.problem h1{
-    width: 80%;
-    font-size: 40px;
-    font-family: 'Staatliches', cursive;
-    padding: 25px 25px 50px 25px;
-}    
-.problem p{
-    width:80%;
-    text-align: justify;
-    line-height: 50px;
-    font-size: 18px;
-    font-family: monospace;
+.second{
+    height: 100%;
+    width: 75%;
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 0px 0px; 
 }
-.problem h1 span{
-    color: var(--green);
-}
+
 
 @media only screen and (min-width: 960px) {
     /* styles for browsers larger than 960px; */

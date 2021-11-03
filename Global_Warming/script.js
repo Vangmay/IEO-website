@@ -9,6 +9,7 @@ hamburger.addEventListener('click',function (){
 
 //Threee          
 //Important stuff
+const GUI = new dat.GUI()
 const Width = hero.clientWidth
 const Height=  hero.clientHeight
 const scene = new THREE.Scene();
@@ -19,6 +20,9 @@ camera.rotation.y = 45/180 * Math.PI;
 camera.position.x = 1221;
 camera.position.y = 389;
 camera.position.z = 1221;
+GUI.add(camera.position,'x').min(-1200).max(1500)
+GUI.add(camera.position,'y').min(-1200).max(1500)
+GUI.add(camera.position,'z').min(-1200).max(1500)
 
 const renderer = new THREE.WebGLRenderer({alpha:true});
 renderer.setSize( Width,Height );
@@ -64,9 +68,9 @@ document.addEventListener('mousemove', onMouseMove)
 const clock = new THREE.Clock()
 
 let loader = new THREE.GLTFLoader();
-loader.load('./src/Earth.gltf',function(gltf){
-    earth = gltf.scene.children[0]
-    scene.scale.set(1.2,1.2,1.2)
+loader.load('../src/Sun.gltf',function(gltf){
+    earth = gltf.scene.children[2]
+    scene.scale.set(1,1,1)
     scene.add(earth)
     animate();
 })
@@ -104,9 +108,6 @@ window.addEventListener('scroll',function(){
     let offset = window.scrollY
     text.style.top = -offset * 0.75 + 'px'
 })
-particlesJS.load('hero','./src/particles.json',function(){
-    console.log('loaded')
-})
-particlesJS.load('Main','./src/particles.json',function(){
+particlesJS.load('hero','../src/particles.json',function(){
     console.log('loaded')
 })
