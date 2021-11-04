@@ -70,7 +70,6 @@ nav{
     height: 4px;
     margin-bottom: 5px;
     position: relative;
-
     background-color: var(--hamburgerColour);
     border-radius: 6px;
     z-index: 1;
@@ -168,7 +167,7 @@ nav{
     z-index: 100;
     color: whitesmoke;
     font-family: 'Staatliches', cursive;
-    font-size: 200px;
+    font-size: 150px;
     mix-blend-mode:difference;
 }
 .text p{
@@ -197,6 +196,7 @@ nav{
     height: 25%;
     width: 50%;
     position: absolute;
+    margin-top: 12px;
 }
 .second{
     height: 100%;

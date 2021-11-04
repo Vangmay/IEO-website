@@ -30,18 +30,21 @@ hero.appendChild( renderer.domElement );
 //Important stuff
 
 //Lighting
-const hlight = new THREE.AmbientLight(0xFFFFFF,10);
+const hlight = new THREE.AmbientLight(0xfcd3030,8);
 hlight.position.set(2,2,4);
-// scene.add(hlight)
+scene.add(hlight)
+const hlight2 = new THREE.AmbientLight(0x404040,1);
+hlight.position.set(2,2,4);
+scene.add(hlight2)
 
 
 var light = new THREE.PointLight(0xffffff, 0.2,1000);
 light.position.set(414,121,88.54)
-scene.add( light );
+// scene.add( light );
 
 var light2 = new THREE.PointLight(0x52f9c4, 2.8,1000);
 light2.position.set(414,772,576.7)
-scene.add( light2 );
+// scene.add( light2 );
 
 
 //Lighting
@@ -67,14 +70,15 @@ document.addEventListener('mousemove', onMouseMove)
 
 const clock = new THREE.Clock()
 
-// let loader = new THREE.GLTFLoader();
-// loader.load('../src/Sun.gltf',function(gltf){
-//     earth = gltf.scene.children[0]
-//     console.log('found it')
-//     scene.scale.set(1,1,1)
-//     scene.add(earth)
-//     animate();
-// })
+let loader = new THREE.GLTFLoader();
+loader.load('../src/Earth.gltf',function(gltf){
+    earth = gltf.scene.children[0]
+    
+    console.log('found it')
+    scene.scale.set(1,1,1)
+    scene.add(earth)
+    animate();
+})
 
 function animate() {
     targetX = mouseX * 0.001
