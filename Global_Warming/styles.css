@@ -196,17 +196,44 @@ nav{
 .first{
     height: 25%;
     width: 50%;
-    
+    position: absolute;
 }
 .second{
     height: 100%;
-    width: 75%;
+    width: 100%;
     display: grid; 
     grid-auto-columns: 1fr; 
     grid-template-columns: 1fr 1fr; 
     gap: 0px 0px; 
+    text-align: center;
 }
+.second div{
+    display: flex;
+    justify-content: center;
+    place-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.textt{
+    max-width: 700px;
+}
+.red{
+    color: red;
+}
+.list{
+    list-style: ' -  ';
+}
+.second div h1{
+    font-size: 50px;
+}
+.why{
+    background-color: var(--darkpurple);
 
+}
+.how{
+    background-color: var(--green);
+    
+}
 
 @media only screen and (min-width: 960px) {
     /* styles for browsers larger than 960px; */

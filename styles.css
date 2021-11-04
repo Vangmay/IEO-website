@@ -183,8 +183,7 @@ nav{
     color: white;
     align-items: center;
     text-align: center;
-    display: flex;
-    flex-direction: row;
+    
 }
 #Main canvas{
     top: 0%;
@@ -195,7 +194,7 @@ nav{
 .problem{
     position: relative;
     z-index: 10;
-    height: 100%;
+    height: fit-content;
     width: 100%;
     display: flex;
     flex-direction: column;
