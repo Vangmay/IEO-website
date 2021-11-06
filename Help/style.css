@@ -9,12 +9,8 @@
     --dark:#212121;
     --darkpurple:#021F4B;
     --green:#37836e;
-    --hamburgerColour:#FFF
-}
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    --hamburgerColour:#FFF;
+    --mintGreen:#8cffb0;
 }
 img{
     width: 150px;
@@ -46,7 +42,7 @@ nav{
     left: 0;
     right: 0;
     z-index: 9999;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color:var(--blue_but_lighter);
     padding:16px 32px;
 }
 
@@ -70,6 +66,7 @@ nav{
     height: 4px;
     margin-bottom: 5px;
     position: relative;
+
     background-color: var(--hamburgerColour);
     border-radius: 6px;
     z-index: 1;
@@ -131,111 +128,63 @@ nav{
     background-color: var(--blue_but_lighter);
 }
 
+body{
+    background: var(--primary);
+}
+
 .hero{
+    display: flex;
     height: 100vh;
     width: 100%;
-    background-color: black;
-    display: grid;
-    place-items: center;
-}
-#Main{
-    background-color: rgba(255, 0, 0, 0);
-}
-.hero canvas{
-    z-index: 0;
-    top: 0;
-    left: 0;
-    position: absolute;
-    outline: none;
-    height: 100%;
-    width: 100%;
-}
-.text{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    place-items: center;
-    align-items: center;
     justify-content: center;
-    flex-direction: column;
-    top: 0;
-    left: 0;
-    
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
 }
 .text h1{
-    z-index: 100;
-    color: whitesmoke;
-    font-family: 'Staatliches', cursive;
-    font-size: 150px;
-    mix-blend-mode:difference;
+    color: var(--mintGreen);
+    font-size: 120px;
 }
-.text p{
-    color: rgb(0, 0, 0);
-    font-size: 14px;
-    z-index: 9999;
+.link{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--blue);
+    transition: all 0.2s ease-out;
 }
-#Main{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background-color: var(--blue);
-    color: white;
-    align-items: center;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-}
-#Main canvas{
-    top: 0%;
-    left: 0%;
-    position: absolute;
-    z-index: 0;
-}
-.first{
-    height: 25%;
-    width: 50%;
-    position: absolute;
-    margin-top: 12px;
-}
-.listt{
-    list-style: '🌳';
-}
-.second{
-    height: 100%;
-    width: 100%;
-    display: grid; 
-    grid-auto-columns: 1fr; 
-    grid-template-columns: 1fr 1fr; 
-    gap: 0px 0px; 
-    text-align: center;
-}
-.second div{
-    display: flex;
-    justify-content: center;
-    place-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-.textt{
-    max-width: 700px;
-}
-.red{
-    color: red;
+.link:hover{
+    letter-spacing: 2px;
 }
 .list{
-    list-style: ' -  ';
+    list-style: none;
 }
-.second div h1{
-    font-size: 50px;
+.div ul{
+    text-align: center;
 }
-.why{
-    background-color: var(--darkpurple);
+.list{
+    align-content: center;
+    justify-content: center;
+    place-content: center;
+    height: fit-content;
+    width: fit-content;
+    text-align: center;
 
 }
-.how{
-    background-color: var(--green);
-    
+.image{
+    background: url('../src/Images/pollution.jpeg');
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+.information{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: fit-content;
+    width: 100%;
+}
+.white{
+    background: #e0e0e0;
 }
 
 @media only screen and (min-width: 960px) {
