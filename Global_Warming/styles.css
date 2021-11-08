@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Staatliches&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&family=Raleway&family=Staatliches&display=swap');
 :root{
     --purple:#604498;
     --blue:#8d8ae3;
@@ -197,6 +197,7 @@ nav{
     width: 50%;
     position: absolute;
     margin-top: 12px;
+    font-family: 'Open Sans', sans-serif;
 }
 .listt{
     list-style: '🌳';

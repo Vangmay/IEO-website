@@ -176,6 +176,13 @@ body{
     background-position: center;
     background-size: cover;
 }
+.image2{
+    background: url('https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=776&q=80');
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover; 
+}
 .information{
     display: flex;
     align-content: center;
