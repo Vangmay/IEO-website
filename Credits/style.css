@@ -1,0 +1,21 @@
+:root{
+    margin: 0;
+}
+
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body{
+    background-color: #ececec;
+    padding: 200px 200px 200px 200px;
+    overflow: hidden;
+}
+
+h3{
+    margin-left: 50px;
+}
+
+p{
+    font-size: 12px;
+}
