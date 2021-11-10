@@ -189,11 +189,30 @@ body{
 }
 
 .image{
-    background: url('../src/Images/pollution.jpeg');
     width: 100%;
     height: 100vh;
+    background-image: url('../src/Images/pollution.jpeg');
+    background-size:cover;
     background-position: center;
-    background-size: cover;
+    text-align: center;
+    place-content: center;
+    align-items: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    color: var(--dark);
+}
+.image:hover{
+    transition: 0.4s ease-in-out;
+    background: var(--mintGreen);
+}
+.image2:hover{
+    transition: 0.4s ease-in-out;
+    background: var(--mintGreen);
+}
+.image3:hover{
+    transition: 0.4s ease-in-out;
+    background: var(--mintGreen);
 }
 .image2{
     background: url('https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=776&q=80');
@@ -201,6 +220,13 @@ body{
     height: 100vh;
     background-position: center;
     background-size: cover; 
+    text-align: center;
+    place-content: center;
+    align-items: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    color: var(--dark);
 }
 .image3{
     background:url('https://images.pexels.com/photos/3174350/pexels-photo-3174350.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
@@ -208,6 +234,16 @@ body{
     height: 100vh;
     background-position: center;
     background-size: cover; 
+    text-align: center;
+    place-content: center;
+    align-items: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    color: var(--dark);
+}
+.back{
+    background: rgba(211, 210, 228, 0.781);
 }
 .information{
     display: flex;
